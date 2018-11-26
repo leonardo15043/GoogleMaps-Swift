@@ -1,0 +1,6 @@
+version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+options: "f3b84cf386f13221e7fcbc192973925f"
+build_time: [1543274990, 795522000]
+inputs:
+  "/Users/leonardo15043/Documents/GitHub/GoMaps/GoMaps/ViewController.swift": [1543274460, 0]
+  "/Users/leonardo15043/Documents/GitHub/GoMaps/GoMaps/AppDelegate.swift": [1543098628, 0]

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38F57FB035B999D5CB546B2A /* libPods-GoMaps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80D4D73AF811C0A16BA704BE /* libPods-GoMaps.a */; };
 		49C2BBA721A9D7F500D7D6BC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C2BBA621A9D7F500D7D6BC /* AppDelegate.swift */; };
 		49C2BBA921A9D7F500D7D6BC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49C2BBA821A9D7F500D7D6BC /* ViewController.swift */; };
 		49C2BBAC21A9D7F500D7D6BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49C2BBAA21A9D7F500D7D6BC /* Main.storyboard */; };
@@ -22,6 +23,9 @@
 		49C2BBAD21A9D7F700D7D6BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49C2BBB021A9D7F700D7D6BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		49C2BBB221A9D7F700D7D6BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80D4D73AF811C0A16BA704BE /* libPods-GoMaps.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GoMaps.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAD48E3CF6D61F5F722D8844 /* Pods-GoMaps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoMaps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoMaps/Pods-GoMaps.debug.xcconfig"; sourceTree = "<group>"; };
+		FF4B21008C4D3B1389552826 /* Pods-GoMaps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoMaps.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoMaps/Pods-GoMaps.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38F57FB035B999D5CB546B2A /* libPods-GoMaps.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				49C2BBA521A9D7F500D7D6BC /* GoMaps */,
 				49C2BBA421A9D7F500D7D6BC /* Products */,
+				5F346AE99F7A45F3915F3891 /* Pods */,
+				7E500435349D6776224496AE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = GoMaps;
 			sourceTree = "<group>";
 		};
+		5F346AE99F7A45F3915F3891 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FAD48E3CF6D61F5F722D8844 /* Pods-GoMaps.debug.xcconfig */,
+				FF4B21008C4D3B1389552826 /* Pods-GoMaps.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7E500435349D6776224496AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				80D4D73AF811C0A16BA704BE /* libPods-GoMaps.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49C2BBB521A9D7F700D7D6BC /* Build configuration list for PBXNativeTarget "GoMaps" */;
 			buildPhases = (
+				21C929B07DFB511ED775AB06 /* [CP] Check Pods Manifest.lock */,
 				49C2BB9F21A9D7F500D7D6BC /* Sources */,
 				49C2BBA021A9D7F500D7D6BC /* Frameworks */,
 				49C2BBA121A9D7F500D7D6BC /* Resources */,
+				45E0F50ABE592705C7579F1C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +122,11 @@
 				TargetAttributes = {
 					49C2BBA221A9D7F500D7D6BC = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -129,6 +160,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		21C929B07DFB511ED775AB06 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GoMaps-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		45E0F50ABE592705C7579F1C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GoMaps/Pods-GoMaps-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GoMaps/Pods-GoMaps-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		49C2BB9F21A9D7F500D7D6BC /* Sources */ = {
@@ -280,6 +360,7 @@
 		};
 		49C2BBB621A9D7F700D7D6BC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FAD48E3CF6D61F5F722D8844 /* Pods-GoMaps.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -289,6 +370,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gpets.ios.GoMaps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -298,6 +380,7 @@
 		};
 		49C2BBB721A9D7F700D7D6BC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF4B21008C4D3B1389552826 /* Pods-GoMaps.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -307,6 +390,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.gpets.ios.GoMaps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
